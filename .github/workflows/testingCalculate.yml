@@ -12,15 +12,9 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '18' # replace with the version of Java you want to use
-      - name: Install JUnit
-        run: wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.6.2/junit-platform-console-standalone-1.6.2.jar # replace with the command to install JUnit
-      - name: Install AssertJ
-        run: wget https://repo1.maven.org/maven2/org/assertj/assertj-core/3.19.0/assertj-core-3.19.0.jar # replace with the command to install AssertJ
       - name: Compile calculator.java
         run: javac Calculator.java # replace with the command to compile your java file
-      - name: Run CalculatorTest.java with JUnit
-        run: java -jar junit-platform-console-standalone-1.6.2.jar /CalculatorTest.java # replace with the command to run your test file using JUnit
-      - name: Create manifest file
-        run: jar cfm MyJarFile.jar manifest.mf com/example/*.class
-      - name: Run CalculatorTest.java with AssertJ
-        run: java -jar assertj-core-3.19.0.jar CalculatorTest.java # replace with the command to run your test file using AssertJ
+      - name: Build with Maven
+        run: mvn package  
+      - name: Run CalculatorTest
+        run: mvn test -Dtest=CalculatorTest.java
