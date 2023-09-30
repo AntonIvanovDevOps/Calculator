@@ -17,4 +17,4 @@ jobs:
       - name: Build with Maven
         run: mvn package  
       - name: Run CalculatorTest
-        run: mvn test -Dtest=CalculatorTest -DfailIfNoTests=false
+        run: mvn test -Dtest=CalculatorTest.java -DfailIfNoTests=false
