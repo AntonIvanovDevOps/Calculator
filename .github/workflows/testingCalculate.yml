@@ -19,7 +19,7 @@ jobs:
       - name: Compile calculator.java
         run: javac Calculator.java # replace with the command to compile your java file
       - name: Run CalculatorTest.java with JUnit
-        run: java -jar junit-platform-console-standalone-1.6.2.jar CalculatorTest.java # replace with the command to run your test file using JUnit
+        run: java -jar junit-platform-console-standalone-1.6.2.jar /CalculatorTest.java # replace with the command to run your test file using JUnit
       - name: Create manifest file
         run: jar cfm MyJarFile.jar manifest.mf com/example/*.class
       - name: Run CalculatorTest.java with AssertJ
