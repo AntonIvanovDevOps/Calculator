@@ -17,6 +17,6 @@ jobs:
       - name: Install AssertJ
         run: wget https://repo1.maven.org/maven2/org/assertj/assertj-core/3.19.0/assertj-core-3.19.0.jar # replace with the command to install AssertJ
       - name: Compile calculator.java
-        run: javac calculator.java # replace with the command to compile your java file
+        run: javac Calculator.java # replace with the command to compile your java file
       - name: Run CalculatorTest.java
         run: javac CalculatorTest.java # replace with the command to run your test file
