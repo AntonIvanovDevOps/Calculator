@@ -18,5 +18,7 @@ jobs:
         run: wget https://repo1.maven.org/maven2/org/assertj/assertj-core/3.19.0/assertj-core-3.19.0.jar # replace with the command to install AssertJ
       - name: Compile calculator.java
         run: javac Calculator.java # replace with the command to compile your java file
-      - name: Run CalculatorTest.java
-        run: javac CalculatorTest.java # replace with the command to run your test file
+      - name: Run CalculatorTest.java with JUnit
+        run: java -jar junit-platform-console-standalone-1.6.2.jar --class-path . --scan-classpath # replace with the command to run your test file using JUnit
+      - name: Run CalculatorTest.java with AssertJ
+        run: java -jar assertj-core-3.19.0.jar CalculatorTest.java # replace with the command to run your test file using AssertJ
