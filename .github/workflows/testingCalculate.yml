@@ -11,8 +11,12 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v1
         with:
-          java-version: '18'
+          java-version: '18' # replace with the version of Java you want to use
+      - name: Install JUnit
+        run: wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.6.2/junit-platform-console-standalone-1.6.2.jar # replace with the command to install JUnit
+      - name: Install AssertJ
+        run: wget https://repo1.maven.org/maven2/org/assertj/assertj-core/3.19.0/assertj-core-3.19.0.jar # replace with the command to install AssertJ
       - name: Compile calculator.java
-        run: javac Calculator.java
+        run: javac calculator.java # replace with the command to compile your java file
       - name: Run CalculatorTest.java
-        run: javac CalculatorTest.java 
+        run: javac CalculatorTest.java # replace with the command to run your test file
