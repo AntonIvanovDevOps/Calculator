@@ -13,6 +13,6 @@ jobs:
         with:
           java-version: '11' # replace with the version of Java you want to use
       - name: Compile calculator.java
-        run: javac calculator.java # replace with the command to compile your java file
+        run: javac Calculator.java # replace with the command to compile your java file
       - name: Run CalculatorTest.java
-        run: java -jar junit-platform-console-standalone-1.6.2.jar --class-path  ../ # replace with the command to run your test file using JUnit
+        run: java -jar junit-platform-console-standalone-1.6.2.jar --class-path  ~/CalculatorTest.java # replace with the command to run your test file using JUnit
