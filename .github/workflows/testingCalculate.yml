@@ -12,8 +12,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '18' # replace with the version of Java you want to use
-      - name: Compile calculator.java
-        run: javac Calculator.java # replace with the command to compile your java file
+     # - name: Compile calculator.java
+     #   run: javac Calculator.java # replace with the command to compile your java file
       - name: Build with Maven
         run: mvn package  
       - name: Run CalculatorTest
