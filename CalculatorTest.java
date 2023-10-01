@@ -19,6 +19,12 @@ public class CalculatorTest {
         calculator = new Calculator();
     }
 
+    @Test 
+    public void calculator(){
+        assertTrue(true);
+    }
+    
+
     @ParameterizedTest
     @CsvSource({"5, 2, 7", "5, 0, 5", "-2, 6, 4", "5, -2, 3", "-5, -2, -7", "5.5, 2, 7.5"})
     public void testSummarize(double number1, double number2, double expectedResult) {
