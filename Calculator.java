@@ -20,7 +20,7 @@ public class Calculator {
             System.out.println("Делить на 0 нельзя!");
             throw new ArithmeticException("can't divide by zero");
         }
-        return number1 / number2;
+        // return number1 / number2;
     }
 
     public static boolean isNumber(String str) {
