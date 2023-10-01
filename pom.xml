@@ -46,7 +46,7 @@
                 <version>2.22.2</version>
                 <configuration>
                     <includes>
-                        <include>CalculatorTest.java</include>
+                        <include>CalculatorTest</include>
                     </includes>
                 </configuration>
             </plugin>
