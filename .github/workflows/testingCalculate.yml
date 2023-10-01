@@ -18,4 +18,4 @@ jobs:
       - name: Build with Maven
         run: mvn clean package
       - name: Run Junit tests
-        run: mvn "CalculatorTest"
+        run: mvn CalculatorTest.java
