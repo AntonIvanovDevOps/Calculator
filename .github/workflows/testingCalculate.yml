@@ -1,21 +1,18 @@
 name: Testing Calculator
-
 on:
   push:
-    branches: [main]
-
+    branches: [master]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
-      
-      - name: Set up JDK 18
+      - name: Set up Java
         uses: actions/setup-java@v1
         with:
-          java-version: 18
-      - name: Build with Maven
-        run: mvn clean package
-      - name: Run Junit tests
-        run: mvn test -Dtest=CalculatorTest
+          java-version: '11' # replace with the version of Java you want to use
+      - name: Compile calculator.java
+        run: javac calculator.java # replace with the command to compile your java file
+      - name: Run CalculatorTest.java
+        run: java -jar junit-platform-console-standalone-1.6.2.jar --class-path  ../ # replace with the command to run your test file using JUnit

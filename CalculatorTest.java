@@ -6,8 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -23,7 +21,7 @@ public class CalculatorTest {
     public void calculator(){
         assertTrue(true);
     }
-    
+
 
     @ParameterizedTest
     @CsvSource({"5, 2, 7", "5, 0, 5", "-2, 6, 4", "5, -2, 3", "-5, -2, -7", "5.5, 2, 7.5"})
